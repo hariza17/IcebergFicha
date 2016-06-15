@@ -447,6 +447,12 @@ Empleados de AIB
 			</ol>
 		</div>
 		<div class="topbar-right">
+			<div class="navbar-btn btn-group">
+                    <button id="btn-syncronizar" class="btn btn-lg  btn-primary" aria-expanded="false">
+                       Sync
+                    </button>
+
+                </div>
 			<div class="ml15 ib va-m" id="sidebar_right_toggle">
 				<div class="navbar-btn btn-group btn-group-number mv0">
 					<button class="btn btn-sm btn-default btn-bordered prn pln">
@@ -455,6 +461,7 @@ Empleados de AIB
 					<button class="btn btn-primary btn-sm btn-bordered hidden-xs" id="total_add">0</button>
 				</div>
 			</div>
+
 		</div>
 	</header>
 
@@ -496,6 +503,7 @@ Empleados de AIB
 											<select id="zonainfluencia" ng-model="beneficiario.zonainfluencia" >
 												<option value="0">Seleccione area de influencia</option>
 												<option value="ararca">Ararca</option>
+												<option value="0">Barú</option>
 												<option value="bocachica">Bocachica</option>
 												<option value="canooro">Caño del Oro</option>
 												<option value="pasacaballo">Pasacaballo</option>
@@ -571,11 +579,11 @@ Empleados de AIB
 										<label for="apellidos" class="field-label">Sexo</label>
 										<div class="option-group field">
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" ng-model="beneficiario.sexo" checked="" value="masculino">
+												<input type="radio" ng-model="beneficiario.sexo" name="sexo" checked="" value="masculino">
 												<span class="radio"></span>Masculino</label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" ng-model="beneficiario.sexo" value="femenino">
+												<input type="radio" ng-model="beneficiario.sexo" name="sexo" value="femenino">
 												<span class="radio"></span>Femenino</label>
 										</div>
 									</div>

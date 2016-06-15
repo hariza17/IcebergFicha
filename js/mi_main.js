@@ -53,7 +53,7 @@
 					console.log("aqui");
 				}
 				guardarInformacion(form);
-				location.reload();
+				//location.reload();
 
 			}
 		});
@@ -143,13 +143,20 @@
 			}
 		});
 
+		var btnSync=$('#btn-syncronizar');
+		btnSync.click(function(){
+			window.location='sincronizado.html';
+		});
+
 
 	});
 
 	function guardarInformacion(form) {
 
-		//var datos = JSON.stringify(form.serializeArray());
-		//console.log(datos);
+		var datos = JSON.stringify(form.serializeArray());
+
+		localStorage.setItem(JSON.parse(datos)[0].value, datos);
+		console.log(datos);
 
 
 
