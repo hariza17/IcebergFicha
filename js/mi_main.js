@@ -54,7 +54,7 @@
 				}
 				guardarInformacion(form);
 				//location.reload();
-
+                
 			}
 		});
 
@@ -156,10 +156,6 @@
 		var datos = JSON.stringify(form.serializeArray());
 
 		localStorage.setItem(JSON.parse(datos)[0].value, datos);
-		console.log(datos);
-
-
-
 
 	}
 

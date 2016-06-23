@@ -485,9 +485,9 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="identificacion" class="field-label">Identificacion</label>
+										<label for="identificacion" class="field-label">Identificación</label>
 										<label for="identificacion" class="field prepend-icon">
-											<input type="text" id="beneficiario.identificacion" class="gui-input" placeholder="Identificacion" ng-model="identificacion">
+											<input type="text" id="identificacion" class="gui-input" placeholder="Identificación" ng-model="beneficiario.identificacion">
 											<label for="firstname" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -498,10 +498,10 @@ Empleados de AIB
 
 								<div class="col-md-6">
 									<div class="section">
-										<label for="area" class="field-label">Area de influencia</label>
+										<label for="area" class="field-label">Área de influencia</label>
 										<label class="field select">
 											<select id="zonainfluencia" ng-model="beneficiario.zonainfluencia" >
-												<option value="0">Seleccione area de influencia</option>
+												<option value="0">Seleccione área de influencia</option>
 												<option value="ararca">Ararca</option>
 												<option value="0">Barú</option>
 												<option value="bocachica">Bocachica</option>
@@ -520,9 +520,9 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="pnombres" class="field-label">Primer nombres</label>
+										<label for="pnombres" class="field-label">Primer nombre</label>
 										<label for="pnombres" class="field prepend-icon">
-											<input type="text" ng-model="beneficiario.pnombre" id="pnombres" class="gui-input" placeholder="Primer nombre">
+											<input type="text" ng-model="pnombre" id="pnombre" class="gui-input" placeholder="Primer nombre">
 											<label for="pnombres" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -632,11 +632,11 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="direccion" class="field-label">Direccion</label>
+										<label for="direccion" class="field-label">Dirección</label>
 
 										<div class="smart-widget">
 											<label for="direccion" class="field prepend-icon">
-												<input type="text" ng-model="beneficiario.direccion" id="direccion" class="gui-input" placeholder="Direccion">
+												<input type="text" ng-model="beneficiario.direccion" id="direccion" class="gui-input" placeholder="Dirección">
 												<label for="direccion" class="field-icon">
 													<i class="fa fa-user"></i>
 												</label>
@@ -710,17 +710,17 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<h6 class="mt40 mb20" id="spy4">Jefatura del Hogar (Marcar solo una opción)</h6>
+									<h6 class="mt40 mb20" id="spy4">Jefatura del Hogar</h6>
 
 									<div class="section">
 										<label for="tipo_jefatura" class="field-label">Tipo de jefatura</label>
 										<div class="option-group field">
 											<label class="block mt15 option option-primary">
-												<input type="radio" name="tipo_jefatura" ng-model="beneficiario.tipo_jefatura" checked="">
+												<input type="radio" name="tipo_jefatura" ng-model="beneficiario.tipo_jefatura" value="unipersonal" checked="">
 												<span class="radio"></span>Unipersonal </label>
 
 											<label class="block mt15 option option-primary">
-												<input type="radio"  name="tipo_jefatura" ng-model="beneficiario.tipo_jefatura">
+												<input type="radio" name="tipo_jefatura" ng-model="beneficiario.tipo_jefatura" value="compartida">
 												<span class="radio"></span>Compartida</label>
 
 										</div>
@@ -728,49 +728,49 @@ Empleados de AIB
 								</div>
 
 
-								<div class="col-md-6">
-									<h6 class="mt40 mb20" id="spy4">¿Quién o quiénes son los jefes? (Marcar solo una opción)</h6>
+								<div class="col-md-6" >
+									<h6 class="mt40 mb20" id="spy4">¿Quién o quiénes son los jefes?</h6>
 
 									<div class="section">
 										<label for="quien_jefatura" class="field-label"></label>
 										<div class="option-group field row">
 											<div class="col-md-3">
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" value="padre">
 													<span class="radio"></span>Padre </label>
 
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" value="padres">
 													<span class="radio"></span>Padres </label>
 											</div>
 
 											<div class="col-md-3">
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="" value="madre">
 													<span class="radio"></span>Madre </label>
 
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" value="padres/abuelos">
 													<span class="radio"></span>Padres/abuelos </label>
 											</div>
 
 											<div class="col-md-3">
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="" value="abuelo">
 													<span class="radio"></span>Abuelo </label>
 
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" value="abuelos">
 													<span class="radio"></span>Abuelos </label>
 											</div>
 											<div class="col-md-3">
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" checked="" value="otro">
 													<span class="radio"></span>
 													<br>Otro</label>
 
 												<label class="block mt15 option option-primary">
-													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura">
+													<input type="radio" name="quien_jefatura" ng-model="beneficiario.quien_jefatura" value="otros">
 													<span class="radio"></span>Otros </label>
 											</div>
 										</div>
@@ -802,7 +802,7 @@ Empleados de AIB
 
 										<div class="smart-widget">
 											<label for="jefe_familia2" class="field prepend-icon">
-												<input type="text"  ng-model="beneficiario.jefe_familia2" id="jefe_familia1" class="gui-input" placeholder="Nombre completo">
+												<input type="text"  ng-model="beneficiario.jefe_familia2" id="jefe_familia2" class="gui-input" placeholder="Nombre completo">
 												<label for="jefe_familia2" class="field-icon">
 													<i class="fa fa-user"></i>
 												</label>
@@ -849,11 +849,11 @@ Empleados de AIB
 
 										<div class="option-group field">
 											<label class=" option option-primary radio-inline">
-												<input type="radio" name="jefe_sexo1"  ng-model="beneficiario.jefe_sexo1"checked="">
+												<input type="radio" name="jefe_sexo1"  ng-model="beneficiario.jefe_sexo1"checked="" value="M">
 												<span class="radio"></span>M</label>
 
 											<label class=" option option-primary radio-inline">
-												<input type="radio" name="jefe_sexo1" ng-model="beneficiario.jefe_sexo1">
+												<input type="radio" name="jefe_sexo1" ng-model="beneficiario.jefe_sexo1" value="F">
 												<span class="radio"></span>F</label>
 
 										</div>
@@ -864,11 +864,11 @@ Empleados de AIB
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="jefe_sexo2" ng-model="beneficiario.jefe_sexo2" checked="">
+												<input type="radio" name="jefe_sexo2" ng-model="beneficiario.jefe_sexo2" checked="" value="M">
 												<span class="radio"></span>M</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="jefe_sexo2" ng-model="beneficiario.jefe_sexo1">
+												<input type="radio" name="jefe_sexo2" ng-model="beneficiario.jefe_sexo2" value="F">
 												<span class="radio"></span>F</label>
 										</div>
 									</div>
@@ -879,7 +879,7 @@ Empleados de AIB
 									<div class="section">
 										<label for="jefe_nacio1" class="field-label">Nació en:</label>
 										<label for="jefe_nacio1" class="field prepend-icon">
-											<input type="text" ng-model="beneficiario.jefe_nacio1" id="jefe_nacio1" class="gui-input" placeholder="Nacio en">
+											<input type="text" ng-model="beneficiario.jefe_nacio1" id="jefe_nacio1" class="gui-input" placeholder="Nació en">
 											<label for="jefe_nacio1" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -889,7 +889,7 @@ Empleados de AIB
 									<div class="section">
 										<label for="jefe_nacio2" class="field-label">Nació en:</label>
 										<label for="jefe_nacio2" class="field prepend-icon">
-											<input type="text" ng-model="beneficiario.jefe_nacio2" id="jefe_nacio2" class="gui-input" placeholder="Nacio en">
+											<input type="text" ng-model="beneficiario.jefe_nacio2" id="jefe_nacio2" class="gui-input" placeholder="Nació en">
 											<label for="jefe_nacio2" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -900,9 +900,9 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="nombre_encuestado" class="field-label">Nombre de quien contesta la encuesta</label>
+										<label for="nombre_encuestado" class="field-label">Nombre de quién contesta la encuesta</label>
 										<label for="nombre_encuestado" class="field prepend-icon">
-											<input type="text" ng-model="beneficiario.nombre_encuestado" id="nombre_encuestado" class="gui-input" placeholder="Nombre de quien contesta la encuesta">
+											<input type="text" ng-model="beneficiario.nombre_encuestado" id="nombre_encuestado" class="gui-input" placeholder="Nombre de quién contesta la encuesta">
 											<label for="nombre_encuestado" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -918,11 +918,11 @@ Empleados de AIB
 
 										<div class="option-group field">
 											<label class=" option option-primary radio-inline">
-												<input type="radio" name="sexo_encuestado" ng-model="beneficiario.sexo_encuestado" checked="">
+												<input type="radio" name="sexo_encuestado" ng-model="beneficiario.sexo_encuestado" checked="" value="M">
 												<span class="radio"></span>M</label>
 
 											<label class=" option option-primary radio-inline">
-												<input type="radio" name="sexo_encuestado" ng-model="beneficiario.sexo_encuestado">
+												<input type="radio" name="sexo_encuestado" ng-model="beneficiario.sexo_encuestado" value="F">
 												<span class="radio"></span>F</label>
 
 										</div>
@@ -932,33 +932,33 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">Parentesco de quien contesta la encuesta con el jefe de la familia:</label>
+										<label for="parentesco_encuestado" class="field-label">Parentesco de quién contesta la encuesta con el jefe de la familia:</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" checked="" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" checked="" ng-model="beneficiario.parentesco_encuestado" value="esposo">
 												<span class="radio"></span>Esposo (a)</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="hermano">
 												<span class="radio"></span>Hermano (a)</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="abuelos">
 												<span class="radio"></span>Padres (Abuelos)</label>
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="propio">
 												<span class="radio"></span>No aplica (es el/la jefe )</label>
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="tio">
 												<span class="radio"></span>Tío (a)</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="hijo">
 												<span class="radio"></span>Hijo (a)</label>
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+												<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="vecino">
 												<span class="radio"></span>Vecino (a)</label>
 
 										</div>
@@ -966,12 +966,12 @@ Empleados de AIB
 										<div class="row">
 											<div class="col-md-1 form-inline">
 												<label class="option option-primary radio-inline">
-													<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado">
+													<input type="radio" name="parentesco_encuestado" ng-model="beneficiario.parentesco_encuestado" value="otro">
 													<span class="radio"></span>Otro</label>
 											</div>
 											<div class="col-md-4">
 												<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-													<input type="text" ng-model="beneficiario.parentesco_encuestado" id="jefe_nacio1" class="gui-input" placeholder="Otro">
+													<input type="text" ng-model="beneficiario.parentesco_encuestado" id="parentesco_encuestado" class="gui-input" placeholder="Otro">
 													<label for="parentesco_encuestado" class="field">
 
 													</label>
@@ -987,15 +987,15 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">Idioma o Lengua Principal de la Familia:</label>
+										<label for="lengua_familia" class="field-label">Idioma o Lengua Principal de la Familia:</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="lengua_familia" ng-model="beneficiario.lengua_familia" checked="">
+												<input type="radio" name="lengua_familia" ng-model="beneficiario.lengua_familia" checked="" value="español">
 												<span class="radio"></span>Español</label>
 											<label class="option option-primary radio-inline">
-												<input type="radio"  name="lengua_familia" ng-model="beneficiario.lengua_familia">
+												<input type="radio"  name="lengua_familia" ng-model="beneficiario.lengua_familia" value="afro">
 												<span class="radio"></span>Lengua Afro</label>
 										</div>
 									</div>
@@ -1004,7 +1004,7 @@ Empleados de AIB
 									<div class="section">
 										<label for="procedencia_familia" class="field-label">Procedencia Flia</label>
 										<label for="procedencia_familia" class="field prepend-icon">
-											<input type="procedencia_familia" ng-model="beneficiario.procedencia_familia" id="email" class="gui-input" placeholder="Procedencia Flia">
+											<input type="text" ng-model="beneficiario.procedencia_familia" id="procedencia_familia" class="gui-input" placeholder="Procedencia Flia">
 											<label for="procedencia_familia" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -1017,16 +1017,16 @@ Empleados de AIB
 								<div class="col-md-3 form-inline">
 									<label for="otra_comunidad" class="field-label">Flia Otra Comunidad</label>
 									<label class="option option-primary radio-inline">
-										<input type="radio" name="otra_comunidad" ng-model="beneficiario.otra_comunidad">
+										<input type="radio" name="otra_comunidad" ng-model="beneficiario.otra_comunidad" value="si" checked="">
 										<span class="radio"></span>Si</label>
 
 									<label class="option option-primary radio-inline">
-										<input type="radio" name="otra_comunidad">
+										<input type="radio" name="otra_comunidad" ng-model="beneficiario.otra_comunidad" value="no">
 										<span class="radio"></span>No</label>
 								</div>
 								<div class="col-md-4">
 									<label for="otra_comunidad" class="field prepend-icon form-inline">
-										<input type="text" ng-model="beneficiario.otra_comunidad" id="jefe_nacio1" class="gui-input" placeholder="Cual">
+										<input type="text" ng-model="beneficiario.otra_comunidad" id="otra_comunidad" class="gui-input" placeholder="Cual">
 										<label for="otra_comunidad" class="field">
 
 										</label>
@@ -1045,7 +1045,7 @@ Empleados de AIB
 									<div class="section">
 										<label for="npersonas_viviendas" class="field-label">¿Cuántas personas hay en esta vivienda? </label>
 										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.npersonas_viviendas" id="email" class="gui-input" placeholder="Numero de personas">
+											<input type="number" ng-model="beneficiario.npersonas_viviendas" id="npersonas_viviendas" class="gui-input" placeholder="Numero de personas">
 											<label for="npersonas_viviendas" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
@@ -1055,30 +1055,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay niños y niñas entre 0 y 6 meses? </label>
+									<label for="perso_vivienda1" class="field-label">¿En la familia hay niños y niñas entre 0 y 6 meses? </label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda1" ng-model="beneficiario.perso_vivienda1" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda1" ng-model="beneficiario.perso_vivienda1">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda1" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda1" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda1" id="perso_vivienda1" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda1" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1089,30 +1075,16 @@ Empleados de AIB
 
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay niños entre 7 meses y 2 años de edad?</label>
+									<label for="perso_vivienda2" class="field-label">¿En la familia hay niños entre 7 meses y 2 años de edad?</label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda2" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda2">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda2" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda2" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda2" id="perso_vivienda2" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda2" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1122,30 +1094,15 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay niños entre 3 y 5 años? </label>
+									<label for="perso_vivienda3" class="field-label">¿En la familia hay niños entre 3 y 5 años? </label>
 								</div>
+								
 								<div class="col-md-3">
 									<div class="section">
 
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda3" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda3">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="section">
-
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda3" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda3" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda3" id="perso_vivienda3" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda3" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1155,30 +1112,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay niños y niñas entre 6 y 11 años? </label>
+									<label for="perso_vivienda4" class="field-label">¿En la familia hay niños y niñas entre 6 y 11 años? </label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda4" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda4">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda4" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda4" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda4" id="perso_vivienda4" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda4" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1188,30 +1131,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay niños y niñas entre 12 y 17 años? </label>
+									<label for="perso_vivienda5" class="field-label">¿En la familia hay niños y niñas entre 12 y 17 años? </label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda5" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda5">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda5" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda5" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda5" id="perso_vivienda5" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda5" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1221,30 +1150,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay hombres y mujeres entre 18 y 40 años?</label>
+									<label for="perso_vivienda6" class="field-label">¿En la familia hay hombres y mujeres entre 18 y 40 años?</label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda6" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda6">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda6" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda6" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda6" id="perso_vivienda6" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda6" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1254,30 +1169,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay hombres y mujeres entre 41 y 64 años? </label>
+									<label for="perso_vivienda7" class="field-label">¿En la familia hay hombres y mujeres entre 41 y 64 años? </label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda7" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda7">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda7" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda7" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda7" id="perso_vivienda7" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda7" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1287,30 +1188,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay mujeres y hombres mayores de 65 años?</label>
+									<label for="perso_vivienda8" class="field-label">¿En la familia hay mujeres y hombres mayores de 65 años?</label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda8" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda8">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda8" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda8" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda8" id="perso_vivienda8" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda8" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1322,30 +1209,15 @@ Empleados de AIB
 
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay mujeres embarazadas? </label>
+									<label for="perso_vivienda9" class="field-label">¿En la familia hay mujeres embarazadas? </label>
 								</div>
+								
 								<div class="col-md-3">
 									<div class="section">
 
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda9" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda9">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-3">
-									<div class="section">
-
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda9" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda9" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda9" id="perso_vivienda9" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda9" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1355,30 +1227,16 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="npersonas_viviendas" class="field-label">¿En la familia hay personas con discapacidad?</label>
+									<label for="perso_vivienda10" class="field-label">¿En la familia hay personas con discapacidad?</label>
 								</div>
-								<div class="col-md-3">
-									<div class="section">
-
-
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda10" checked="">
-												<span class="radio"></span>Si</label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="perso_vivienda10">
-												<span class="radio"></span>No</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-3">
 									<div class="section">
 
-										<label for="npersonas_viviendas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.perso_vivienda10" id="email" class="gui-input" placeholder="¿Cuantas?">
-											<label for="npersonas_viviendas" class="field-icon">
+										<label for="perso_vivienda10" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.perso_vivienda10" id="perso_vivienda10" class="gui-input" placeholder="¿Cuantas?">
+											<label for="perso_vivienda10" class="field-icon">
 												<i class="fa fa-user"></i>
 											</label>
 										</label>
@@ -1397,20 +1255,20 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">La familia vive en Casa: (Marque un sola respuesta) </label>
+										<label for="familia_vive" class="field-label">La familia vive en Casa</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="familia_vive" ng-model="beneficiario.familia_vive" checked="">
+												<input type="radio" name="familia_vive" ng-model="beneficiario.familia_vive" checked="" value="propia">
 												<span class="radio"></span>Propia </label>
 
-											<label class="option option-primary radio-inline"ng-model="beneficiario.familia_vive">
-												<input type="radio" name="familia_vive" >
+											<label class="option option-primary radio-inline">
+												<input type="radio" name="familia_vive" ng-model="beneficiario.familia_vive" value="propia">
 												<span class="radio"></span>Alquilada </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="familia_vive"ng-model="beneficiario.familia_vive">
+												<input type="radio" name="familia_vive" ng-model="beneficiario.familia_vive" value="propia">
 												<span class="radio"></span>La Cuida</label>
 
 										</div>
@@ -1427,13 +1285,13 @@ Empleados de AIB
 										<br>
 										<div class="col-md-1 form-inline">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado">
+												<input type="radio" name="familia_vive" ng-model="beneficiario.familia_vive" value="otro">
 												<span class="radio"></span>Otro</label>
 										</div>
 										<div class="col-md-6">
-											<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-												<input type="text" ng-model="beneficiario.familia_vive" id="jefe_nacio1" class="gui-input" placeholder="Cual">
-												<label for="parentesco_encuestado" class="field">
+											<label for="familia_vive" class="field prepend-icon form-inline">
+												<input type="text" ng-model="beneficiario.familia_vive" id="familia_vive" class="gui-input" placeholder="Cual">
+												<label for="familia_vive" class="field">
 
 												</label>
 											</label>
@@ -1447,20 +1305,20 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">En qué tipo de vivienda habita?: (Marque un sola respuesta)</label>
+										<label for="tipo_vivienda" class="field-label">En qué tipo de vivienda habita?</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda"checked="">
+												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda"checked="" value="casa">
 												<span class="radio"></span>Casa </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="tipo_vivienda"ng-model="beneficiario.tipo_vivienda">
+												<input type="radio" name="tipo_vivienda"ng-model="beneficiario.tipo_vivienda" value="apartamento">
 												<span class="radio"></span>Apartamento </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda">
+												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda" value="cuarto">
 												<span class="radio"></span>Cuarto De Inquilinato</label>
 										</div>
 									</div>
@@ -1473,12 +1331,12 @@ Empleados de AIB
 										<br>
 										<div class="col-md-1 form-inline">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="tipo_vivienda">
+												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda" value="otro">
 												<span class="radio"></span>Otro</label>
 										</div>
 										<div class="col-md-6">
 											<label for="tipo_vivienda" class="field prepend-icon form-inline">
-												<input type="text" ng-model="beneficiario.tipo_vivienda" id="jefe_nacio1" class="gui-input" placeholder="Cual">
+												<input type="text" ng-model="beneficiario.tipo_vivienda" id="tipo_vivienda" class="gui-input" placeholder="Cual">
 												<label for="tipo_vivienda" class="field">
 
 												</label>
@@ -1493,33 +1351,33 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">En qué tipo de vivienda habita?: (Marque un sola respuesta)</label>
+										<label for="servicio" class="field-label">Cuáles de estos servicios tiene este hogar?</label>
 										<div class=" option-group field">
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="energia">
 												<span class="checkbox"></span>Energía</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="gas">
 												<span class="checkbox"></span>Gas Natural</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="acueducto">
 												<span class="checkbox"></span>Acueducto</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="alcantarillado">
 												<span class="checkbox"></span>Alcantarillado</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="cable">
 												<span class="checkbox"></span>Tv Cable</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="fijo">
 												<span class="checkbox"></span>Teléfono Fijo</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="servicio" ng-model="beneficiario.servicio" value="ninguno">
 												<span class="checkbox"></span>Ninguno de los anteriores </label>
 										</div>
 									</div>
@@ -1532,35 +1390,35 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="materil_paredes_vivienda" class="field-label">Cuál es el material predominante de las paredes exteriores? (Marque un sola respuesta)</label>
+										<label for="materil_paredes_vivienda" class="field-label">Cuál es el material predominante de las paredes exteriores?</label>
 										<div class=" option-group field">
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="ladrillo">
 												<span class="radio"></span>Bloque /Ladrillo</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="bahareque">
 												<span class="radio"></span>Bahareque</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="madera">
 												<span class="radio"></span>Madera/Tabla/Tablón</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="guadua">
 												<span class="radio"></span>Guadua/Caña/Esterilla</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="zinc">
 												<span class="radio"></span>Zinc/Tela/Cartón</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="plasticos">
 												<span class="radio"></span>Desechos Plásticos</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="materil_paredes_vivienda" checked="">
+												<input type="radio" name="materil_paredes_vivienda" checked="" ng-model="beneficiario.materil_paredes_vivienda" value="sin paredes">
 												<span class="radio"></span>Sin Paredes</label>
 
 										</div>
@@ -1571,24 +1429,24 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-8">
 									<div class="section">
-										<label for="piso_vivienda" class="field-label">Cuál es el material predominante de los pisos? (Marque un sola respuesta) </label>
+										<label for="piso_vivienda" class="field-label">Cuál es el material predominante de los pisos?</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="piso_vivienda" checked="">
+												<input type="radio" name="piso_vivienda" checked="" ng-model="beneficiario.piso_vivienda" value="ceramica">
 												<span class="radio"></span>Cerámica/Baldosas </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="piso_vivienda">
+												<input type="radio" name="piso_vivienda" ng-model="beneficiario.piso_vivienda" value="tablon">
 												<span class="radio"></span>Tableta/Tablón </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="piso_vivienda">
+												<input type="radio" name="piso_vivienda" ng-model="beneficiario.piso_vivienda" value="cemento">
 												<span class="radio"></span>Cemento/Gravilla</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="piso_vivienda">
+												<input type="radio" name="piso_vivienda" ng-model="beneficiario.piso_vivienda" value="tierra">
 												<span class="radio"></span>Tierra/Arena</label>
 
 
@@ -1607,13 +1465,13 @@ Empleados de AIB
 										<br>
 										<div class="col-md-1 form-inline">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado">
+												<input type="radio" name="piso_vivienda" ng-model="beneficiario.piso_vivienda" value="otro">
 												<span class="radio"></span>Otro</label>
 										</div>
 										<div class="col-md-6">
-											<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-												<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="Cual">
-												<label for="parentesco_encuestado" class="field">
+											<label for="piso_vivienda" class="field prepend-icon form-inline">
+												<input type="text" name="piso_vivienda" id="piso_vivienda" class="gui-input" placeholder="Cual" ng-model="beneficiario.piso_vivienda">
+												<label for="piso_vivienda" class="field">
 
 												</label>
 											</label>
@@ -1627,21 +1485,18 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="cuartos_vivienda" class="field-label">Cuantos cuartos o piezas dispone su hogar? (Marque un sola respuesta)</label>
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="cuartos_vivienda" checked="">
-												<span class="radio"></span>1-2 </label>
+										<label for="cuartos_vivienda" class="field-label">Cuantos cuartos o piezas dispone su hogar?</label>
+								<div class="col-md-6">
+									<div class="section">
 
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="cuartos_vivienda">
-												<span class="radio"></span>3-4 </label>
-
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="cuartos_vivienda">
-												<span class="radio"></span>5-6</label>
-
-										</div>
+										<label for="cuartos_vivienda" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.cuartos_vivienda" id="cuartos_vivienda" class="gui-input" placeholder="¿Cuantos?">
+											<label for="cuartos_vivienda" class="field-icon">
+												<i class="fa fa-user"></i>
+											</label>
+										</label>
+									</div>
+								</div>
 
 
 									</div>
@@ -1649,61 +1504,45 @@ Empleados de AIB
 								</div>
 
 								<div class="col-md-6">
+									<div class="section">
+										<label for="personas_habitacion" class="field-label">Cuantos personas duermen por habitación?</label>
+								<div class="col-md-6">
+									<div class="section">
 
-									<div class="row">
-
-										<div class="col-md-12">
-											<label for="cuartos_vivienda" class="field-label">Cuantas personas duermen por habitación: </label>
-											<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-												<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="Cuantas">
-												<label for="parentesco_encuestado" class="field">
-
-												</label>
+										<label for="personas_habitacion" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.personas_habitacion" id="personas_habitacion" class="gui-input" placeholder="¿Cuantas?">
+											<label for="personas_habitacion" class="field-icon">
+												<i class="fa fa-user"></i>
 											</label>
-										</div>
+										</label>
+									</div>
+								</div>
+
 
 									</div>
+
 								</div>
 
 							</div>
-
-							<div class="row">
+                            <div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="posee_animales" class="field-label">Posee animales de cría: </label>
-										<div class=" option-group field">
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="posee_animales" checked="">
-												<span class="radio"></span>Si</label>
+										<label for="posee_animales" class="field-label">Posee animales de cria?</label>
+								<div class="col-md-6">
+									<div class="section">
 
-											<label class="option option-primary radio-inline">
-												<input type="radio" name="posee_animales">
-												<span class="radio"></span>No</label>
-
-
-
-										</div>
-
-
+										<label for="posee_animales" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.posee_animales" id="posee_animales" class="gui-input" placeholder="¿Cuantos?">
+											<label for="posee_animales" class="field-icon">
+												<i class="fa fa-user"></i>
+											</label>
+										</label>
 									</div>
-
 								</div>
 
-								<div class="col-md-6">
-
-									<div class="row">
-
-										<div class="col-md-12">
-											<label for="cuartos_vivienda" class="field-label">Cuantos</label>
-											<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-												<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="Cuantos">
-												<label for="parentesco_encuestado" class="field">
-
-												</label>
-											</label>
-										</div>
 
 									</div>
+
 								</div>
 
 							</div>
@@ -1711,36 +1550,36 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">Animales de cria:</label>
+										<label for="animales_cria" class="field-label">Animales de cria:</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="gallinas">
 												<span class="checkbox"></span>Gallinas</label>
 
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="cerdos">
 												<span class="checkbox"></span>Cerdos</label>
 
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="pollos">
 												<span class="checkbox"></span>Pollos</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="cocas">
 												<span class="checkbox"></span>Cocas</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="pavos">
 												<span class="checkbox"></span>Pavos</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="patos">
 												<span class="checkbox"></span>Patos</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="animales_cria" ng-model="beneficiario.animales_cria" value="vacas">
 												<span class="checkbox"></span>Vacas</label>
 
 
@@ -1750,13 +1589,13 @@ Empleados de AIB
 										<div class="row">
 											<div class="col-md-1 form-inline">
 												<label class="option option-primary radio-inline">
-													<input type="radio" name="parentesco_encuestado">
+													<input type="radio" name="animales_cria" ng-model="beneficiario.animales_cria" value="otro">
 													<span class="radio"></span>Otro</label>
 											</div>
 											<div class="col-md-4">
 												<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-													<input type="text" name="parentesco_encuestado" id="jefe_nacio1" class="gui-input" placeholder="Otro">
-													<label for="parentesco_encuestado" class="field">
+													<input type="text" name="animales_cria" ng-model="beneficiario.animales_cria"  class="gui-input" placeholder="Otro" id="animales_cria">
+													<label for="animales_cria" class="field">
 
 													</label>
 												</label>
@@ -1772,50 +1611,44 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
-										<label for="posee_animales" class="field-label">Su vivienda se Encuentra en Riesgo: </label>
+										<label for="riesgo_vivienda" class="field-label">Su vivienda se Encuentra en Riesgo: </label>
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="posee_animales" checked="">
+												<input type="radio" name="riesgo_vivienda" checked="" ng-model="beneficiario.riesgo_vivienda" value="si">
 												<span class="radio"></span>Si</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="posee_animales">
+												<input type="radio" name="riesgo_vivienda" ng-model="beneficiario.riesgo_vivienda" value="no">
 												<span class="radio"></span>No</label>
-
-
-
 										</div>
-
-
 									</div>
-
 								</div>
-
-
 							</div>
 							<div class="row">
 								<div class="col-md-8">
 									<div class="section">
-										<label for="piso_vivienda" class="field-label">Riesgos</label>
+										<label for="riesgos" class="field-label">Riesgos</label>
 										<br>
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="riesgo_vivienda" checked="">
+												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="inundaciones" checked="">
 												<span class="radio"></span>Inundaciones </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="riesgo_vivienda">
+												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="avalancha">
 												<span class="radio"></span>Avalancha / Derrumbe/ Deslizamiento</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="riesgo_vivienda">
+												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="hundimiento">
 												<span class="radio"></span>Hundimiento Del Terreno</label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="riesgo_vivienda">
+												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="desbordamiento">
 												<span class="radio"></span>Desbordamiento</label>
-
+                                            <label class="option option-primary radio-inline">
+												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="ninguna">
+												<span class="radio"></span>Ninguna</label>
 
 
 										</div>
@@ -1831,12 +1664,12 @@ Empleados de AIB
 										<br>
 										<div class="col-md-1 form-inline">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="parentesco_encuestado">
+												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="otro">
 												<span class="radio"></span>Otro</label>
 										</div>
 										<div class="col-md-10">
-											<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-												<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="Cual">
+											<label for="riesgos" class="field prepend-icon form-inline">
+												<input type="text" name="riesgos" ng-model="beneficiario.riesgos" id="riesgos" class="gui-input" placeholder="Cual">
 												<label for="parentesco_encuestado" class="field">
 
 												</label>
@@ -1855,35 +1688,35 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿De dónde se abastece de agua? (Espere la respuesta y marque todas las menciones):</label>
+										<label for="abastece_agua" class="field-label">¿De dónde se abastece de agua?</label>
 
 										<div class=" option-group field">
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="acueducto">
 												<span class="checkbox"></span>Acueducto</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="pozo">
 												<span class="checkbox"></span>Pozo</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="agua lluvia">
 												<span class="checkbox"></span>Agua Lluvia</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="pila publica">
 												<span class="checkbox"></span>Pila pública</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="carro tanque">
 												<span class="checkbox"></span>Carro Tanque</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="rio">
 												<span class="checkbox"></span>Rio/manantial</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="comprada">
 												<span class="checkbox"></span>Comprada</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="abastece_agua" ng-model="beneficiario.abastece_agua" value="ninguna">
 												<span class="checkbox"></span>NS/NR</label>
 
 										</div>
@@ -1897,13 +1730,13 @@ Empleados de AIB
 
 							<div class="row">
 								<div class="col-md-6 form-inline">
-									<label for="otra_comunidad" class="field-label">El agua para consumo humano se mantiene en recipientes tapados</label>
+									<label for="consumo_humano" class="field-label">El agua para consumo humano se mantiene en recipientes tapados</label>
 									<label class="option option-primary radio-inline">
-										<input type="radio" name="otra_comunidad">
+										<input type="radio" name="consumo_humano" ng-model="consumo_humano" value="si" checked="">
 										<span class="radio"></span>Si</label>
 
 									<label class="option option-primary radio-inline">
-										<input type="radio" name="otra_comunidad">
+										<input type="radio" name="consumo_humano" ng-model="consumo_humano" value="no">
 										<span class="radio"></span>No</label>
 								</div>
 
@@ -1915,26 +1748,26 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Qué tratamiento le hacen al agua para tomar? (Espere la respuesta y marque todas las menciones):</label>
+										<label for="tratamiento_agua" class="field-label">¿Qué tratamiento le hacen al agua para tomar?</label>
 										<div class="row">
 											<div class="col-md-7">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="tratamiento_agua" ng-model="beneficiario.tratamiento_agua" value="ninguno">
 														<span class="checkbox"></span>Ninguno </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="tratamiento_agua" ng-model="beneficiario.tratamiento_agua" value="hervirla">
 														<span class="checkbox"></span>Hervirla</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="tratamiento_agua" ng-model="beneficiario.tratamiento_agua" value="colarla">
 														<span class="checkbox"></span>Colarla </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="tratamiento_agua" ng-model="beneficiario.tratamiento_agua" value="filtrarla">
 														<span class="checkbox"></span>Filtrarla </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="tratamiento_agua" ng-model="beneficiario.tratamiento_agua" value="otro">
 														<span class="checkbox"></span>Otro</label>
 
 												</div>
@@ -1942,9 +1775,9 @@ Empleados de AIB
 
 											<div class="col-md-3">
 
-												<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-													<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-													<label for="parentesco_encuestado" class="field">
+												<label for="tratamiento_agua" class="field prepend-icon form-inline">
+													<input type="text" name="tratamiento_agua" ng-model="beneficiario.tratamiento_agua" id="tratamiento_agua" class="gui-input" placeholder="¿Cual?">
+													<label for="tratamiento_agua" class="field">
 
 													</label>
 												</label>
@@ -1965,25 +1798,25 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cómo disponen de la basura que producen en su vivienda? (Espere la respuesta y marque todas las menciones):</label>
+										<label for="disponen_basura" class="field-label">¿Cómo disponen de la basura que producen en su vivienda?</label>
 
 										<div class=" option-group field">
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="disponen_basura" ng-model="beneficiario.disponen_basura" value="recoleccion">
 												<span class="checkbox"></span>La recoge el camión</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="disponen_basura" ng-model="beneficiario.disponen_basura" value="reciclaje">
 												<span class="checkbox"></span>Reciclarla</label>
 
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="disponen_basura" ng-model="beneficiario.disponen_basura" value="quema">
 												<span class="checkbox"></span>Se quema</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="disponen_basura" ng-model="beneficiario.disponen_basura" value="campo abierto">
 												<span class="checkbox"></span>En campo Abierto</label>
 											<label class="checkbox-inline mt15 option option-primary">
-												<input type="checkbox" name="checked1">
+												<input type="checkbox" name="disponen_basura" ng-model="beneficiario.disponen_basura" value="entierran">
 												<span class="checkbox"></span>La entierran</label>
 
 										</div>
@@ -1998,30 +1831,30 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cómo es la disposición de excretas en su familia? (Mencione las opciones y marque solo todas las menciones):</label>
+										<label for="disposicion_excretas" class="field-label">¿Cómo es la disposición de excretas en su familia?</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="baño">
 														<span class="checkbox"></span>Baño </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="letrina">
 														<span class="checkbox"></span>Letrina</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="poza septica">
 														<span class="checkbox"></span>Poza Séptica </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="campo abierto">
 														<span class="checkbox"></span>Campo abierto </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="quema">
 														<span class="checkbox"></span>La quema</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="entierran">
 														<span class="checkbox"></span>La entierran</label>
 
 													<br>
@@ -2030,16 +1863,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="disposicion_excretas" ng-model="beneficiario.disposicion_excretas" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="disposicion_excretas" class="field prepend-icon form-inline">
+																<input type="text" name="disposicion_excretas" id="disposicion_excretas" class="gui-input" placeholder="¿Cual?" ng-model="beneficiario.disposicion_excretas">
+																<label for="disposicion_excretas" class="field">
 
 																</label>
 															</label>
@@ -2077,26 +1910,26 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cómo es la disposición de excretas en su familia? (Mencione las opciones y marque solo todas las menciones) :</label>
+										<label for="resuelven_conflictos" class="field-label">¿Cuáles son las formas más frecuentes en las que los adultos resuelven sus conflictos?</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="resuelven_conflictos" ng-model="beneficiario.resuelven_conflictos" value="no aplica">
 														<span class="checkbox"></span>No Aplica </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="resuelven_conflictos" ng-model="beneficiario.resuelven_conflictos" value="dialogando">
 														<span class="checkbox"></span>Dialogando</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="resuelven_conflictos" ng-model="beneficiario.resuelven_conflictos" value="peleas">
 														<span class="checkbox"></span>Con gritos y peleas </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="resuelven_conflictos" ng-model="beneficiario.resuelven_conflictos" value="paso del tiempo">
 														<span class="checkbox"></span>Dejan que pase el tiempo </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="resuelven_conflictos" ng-model="beneficiario.resuelven_conflictos" value="golpes">
 														<span class="checkbox"></span>Con golpes y maltrato</label>
 
 													<br>
@@ -2105,16 +1938,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="resuelven_conflictos" ng-model="beneficiario.resuelven_conflictos" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="resuelven_conflictos" class="field prepend-icon form-inline">
+																<input type="text" name="resuelven_conflictos" id="resuelven_conflictos" class="gui-input" placeholder="¿Cual?" ng-model="beneficiario.resuelven_conflictos">
+																<label for="resuelven_conflictos" class="field">
 
 																</label>
 															</label>
@@ -2145,24 +1978,24 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuáles son las formas más frecuentes en que los padres de familia le demuestran el afecto a los niñ@s? (Marque las respuesta) :</label>
+										<label for="demuestran_afecto" class="field-label">¿Cuáles son las formas más frecuentes en que los padres de familia le demuestran el afecto a los niñ@s?</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="demuestran_afecto" ng-model="beneficiario.demuestran_afecto" value="no aplica">
 														<span class="checkbox"></span>No aplica</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="demuestran_afecto" ng-model="beneficiario.demuestran_afecto" value="regalos">
 														<span class="checkbox"></span>Regalos </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="demuestran_afecto" ng-model="beneficiario.demuestran_afecto" value="besos">
 														<span class="checkbox"></span>Besos/abrazos</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="demuestran_afecto" ng-model="beneficiario.demuestran_afecto" value="no lo demuestran">
 														<span class="checkbox"></span>No lo demuestran </label>
 													<br>
 													<br>
@@ -2170,16 +2003,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="demuestran_afecto" ng-model="beneficiario.demuestran_afecto" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="demuestran_afecto" class="field prepend-icon form-inline">
+																<input type="text" name="demuestran_afecto" ng-model="beneficiario.demuestran_afecto" id="demuestran_afecto" class="gui-input" placeholder="¿Cual?">
+																<label for="demuestran_afecto" class="field">
 
 																</label>
 															</label>
@@ -2210,59 +2043,59 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Qué hace la familia cuando los niñ@s se portan mal? (Marque las respuestas):</label>
+										<label for="portan_mal" class="field-label">¿Qué hace la familia cuando los niñ@s se portan mal?</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="no aplica">
 														<span class="checkbox"></span>No aplica</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="nada">
 														<span class="checkbox"></span>Nada</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="dialogo">
 														<span class="checkbox"></span>Diálogo</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="palmadas">
 														<span class="checkbox"></span>Palmadas</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="regaños">
 														<span class="checkbox"></span>Regaños</label>
 
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="prohibicion">
 														<span class="checkbox"></span>Prohibición</label>
 
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="puños">
 														<span class="checkbox"></span>Puños</label>
 
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="encierro">
 														<span class="checkbox"></span>Encierro</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="ignora">
 
 														<span class="checkbox"></span>Los ignora</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="niega alimentos">
 
 														<span class="checkbox"></span>Niega alimentos</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="sin ropa">
 
 														<span class="checkbox"></span>Sin ropa</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="los moja">
 
 														<span class="checkbox"></span>Los moja</label>
 													<br>
@@ -2271,7 +2104,7 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="portan_mal" ng-model="beneficiario.portan_mal" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
@@ -2279,8 +2112,8 @@ Empleados de AIB
 														<div class="col-md-3">
 
 															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+																<input type="text" name="portan_mal" ng-model="beneficiario.portan_mal"  id="portan_mal" class="gui-input" placeholder="¿Cual?">
+																<label for="portan_mal" class="field">
 
 																</label>
 															</label>
@@ -2311,27 +2144,27 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cómo es la relación de los adultos con los niños y niñas de la familia?:</label>
+										<label for="relacion_familia" class="field-label">¿Cómo es la relación de los adultos con los niños y niñas de la familia?</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="relacion_familia" ng-model="beneficiario.relacion_familia" value="no aplica">
 														<span class="checkbox"></span>No aplica</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="relacion_familia" ng-model="beneficiario.relacion_familia" value="es indiferente">
 														<span class="checkbox"></span>Es indiferente </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="relacion_familia" ng-model="beneficiario.relacion_familia" value="tenidas en cuenta">
 														<span class="checkbox"></span>Las opiniones de los niños y las niñas son tenidas en cuenta</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="relacion_familia" ng-model="beneficiario.relacion_familia" value="cuidado">
 														<span class="checkbox"></span>Existe cuidado por parte de los padres </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="relacion_familia" ng-model="beneficiario.relacion_familia" value="amorosa">
 														<span class="checkbox"></span>Es amorosa </label>
 													<br>
 													<br>
@@ -2339,7 +2172,7 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="relacion_familia" ng-model="beneficiario.relacion_familia" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
@@ -2347,8 +2180,8 @@ Empleados de AIB
 														<div class="col-md-3">
 
 															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+																<input type="text" name="relacion_familia" ng-model="beneficiario.relacion_familia" id="relacion_familia" class="gui-input" placeholder="¿Cual?">
+																<label for="relacion_familia" class="field">
 
 																</label>
 															</label>
@@ -2379,24 +2212,24 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Considera usted que el niño o la niña tiene oportunidades de recreación y esparcimiento en la comunidad?:</label>
+										<label for="esparcimiento_comunidad" class="field-label">¿Considera usted que el niño o la niña tiene oportunidades de recreación y esparcimiento en la comunidad?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="esparcimiento_comunidad" ng-model="beneficiario.esparcimiento_comunidad" value="si">
 														<span class="checkbox"></span>Si</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="esparcimiento_comunidad" ng-model="beneficiario.esparcimiento_comunidad" value="no">
 														<span class="checkbox"></span>No</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="esparcimiento_comunidad" ng-model="beneficiario.esparcimiento_comunidad" value="NS">
 														<span class="checkbox"></span>NS</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="esparcimiento_comunidad" ng-model="beneficiario.esparcimiento_comunidad" value="NA">
 														<span class="checkbox"></span>NA</label>
 
 													<br>
@@ -2422,36 +2255,36 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuáles considera usted son las oportunidades de recreación y esparcimiento con que cuenta el niño o la niña?:</label>
+										<label for="opciones_esparcimiento" class="field-label">¿Cuáles considera usted son las oportunidades de recreación y esparcimiento con que cuenta el niño o la niña?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="paseo">
 														<span class="checkbox"></span>Ir de paseo con sus padres</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="amigos">
 														<span class="checkbox"></span>Estar en casa de amigos</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="television">
 														<span class="checkbox"></span>Ver televisión</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="colegio">
 														<span class="checkbox"></span>El colegio</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="calle">
 														<span class="checkbox"></span>La calle </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="parque">
 														<span class="checkbox"></span>Ir al parque</label>
 
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="fiesta">
 														<span class="checkbox"></span>Ir a fiesta</label>
 													<br>
 													<br>
@@ -2459,7 +2292,7 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" value="otros">
 																<span class="checkbox"></span>Otros</label>
 
 														</div>
@@ -2467,8 +2300,8 @@ Empleados de AIB
 														<div class="col-md-3">
 
 															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+																<input type="text" name="opciones_esparcimiento" ng-model="beneficiario.opciones_esparcimiento" id="opciones_esparcimiento" class="gui-input" placeholder="¿Cual?">
+																<label for="opciones_esparcimiento" class="field">
 
 																</label>
 															</label>
@@ -2506,23 +2339,23 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Usted tiene conocimiento si se han presentando manifestaciones de violencia dentro de la familia?:</label>
+										<label for="violencia_familiar" class="field-label">¿Usted tiene conocimiento si se han presentando manifestaciones de violencia dentro de la familia?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="si">
 														<span class="checkbox"></span>Si </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="no">
 														<span class="checkbox"></span>No</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="NS">
 														<span class="checkbox"></span>NS </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="NA">
 														<span class="checkbox"></span>NA </label>
 												</div>
 											</div>
@@ -2544,37 +2377,37 @@ Empleados de AIB
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="entre padres">
 														<span class="checkbox"></span>Agresión verbal entre los padres </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="padres a hijos">
 														<span class="checkbox"></span>Agresión física o verbal de los padres hacia los hijos e hijas </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="abuso sexual">
 														<span class="checkbox"></span>Abuso sexual</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="golpes entre padres">
 														<span class="checkbox"></span>Agresiones físicas entre los padres</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="trabajo infantil">
 														<span class="checkbox"></span>Trabajo infantil</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="abandono un padre">
 														<span class="checkbox"></span>Abandono por parte de uno de los padres</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="abandono ambos padres">
 														<span class="checkbox"></span>Abandono por parte de ambos padres</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="ninguno">
 														<span class="checkbox"></span>Ninguno</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="no aplica">
 														<span class="checkbox"></span>No aplica</label>
 
 													<br>
@@ -2583,16 +2416,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="violencia_familiar" class="field prepend-icon form-inline">
+																<input type="text" name="violencia_familiar" ng-model="beneficiario.violencia_familiar" id="violencia_familiar" class="gui-input" placeholder="¿Cual?">
+																<label for="violencia_familiar" class="field">
 
 																</label>
 															</label>
@@ -2609,44 +2442,78 @@ Empleados de AIB
 
 								</div>
 							</div>
-							<div class="row">
+                            <div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">Según su conocimiento, ¿Qué clase de hechos violento ha presenciado el niño o la niña dentro de la familia?:</label>
+										<label for="hecho_violento" class="field-label">¿Usted cree que los niños o las niñas han presenciado hechos violentos dentro de la familia?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="si">
+														<span class="checkbox"></span>Si </label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="no">
+														<span class="checkbox"></span>No</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="NS">
+														<span class="checkbox"></span>NS </label>
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="NA">
+														<span class="checkbox"></span>NA </label>
+												</div>
+											</div>
+
+										</div>
+
+
+										<br>
+
+
+									</div>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<label for="hecho_violento" class="field-label">Según su conocimiento, ¿Qué clase de hechos violento ha presenciado el niño o la niña dentro de la familia?:</label>
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="entre padres"> 
 														<span class="checkbox"></span>Agresión verbal entre los padres </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="padres a hijos">
 														<span class="checkbox"></span>Agresión física o verbal de los padres hacia los hijos e hijas </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="abuso sexual">
 														<span class="checkbox"></span>Abuso sexual </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="golpes entre padres">
 														<span class="checkbox"></span>Agresiones físicas entre los padres </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="trabajo infantil">
 														<span class="checkbox"></span>Trabajo infantil </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="abandono un padre">
 														<span class="checkbox"></span>Abandono por parte de uno de los padres </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="abandono ambos padres">
 														<span class="checkbox"></span>Abandono por parte de ambos padres </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="ninguno">
 														<span class="checkbox"></span>Ninguno </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="no aplica">
 														<span class="checkbox"></span>No aplica </label>
 
 
@@ -2656,16 +2523,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="hecho_violento" class="field prepend-icon form-inline">
+																<input type="text" name="hecho_violento" ng-model="beneficiario.hecho_violento" id="hecho_violento" class="gui-input" placeholder="¿Cual?">
+																<label for="hecho_violento" class="field">
 
 																</label>
 															</label>
@@ -2688,41 +2555,41 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Como cree usted que ha sido el comportamiento del niño o la niñas después de la ocurrencia de estos hechos dentro de la familia?:</label>
+										<label for="comportamiento_violencia" class="field-label">¿Como cree usted que ha sido el comportamiento del niño o la niñas después de la ocurrencia de estos hechos dentro de la familia?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="tristeza">
 														<span class="checkbox"></span>Se muestra siempre triste</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="desmotivacion">
 														<span class="checkbox"></span>Se nota desmotivado</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="aislamiento">
 														<span class="checkbox"></span>Se nota aislado</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="distraccion">
 														<span class="checkbox"></span>Se nota distraído </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="agresividad">
 														<span class="checkbox"></span>Tienen comportamientos agresivos </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="se asusta">
 														<span class="checkbox"></span>Se asusta con frecuencias </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="no duerme">
 														<span class="checkbox"></span>Presenta dificultades para dormir </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="llora">
 														<span class="checkbox"></span>Llora con frecuencia </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="no aplica">
 														<span class="checkbox"></span>No aplica </label>
 
 
@@ -2732,16 +2599,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" value="otro">
 																<span class="checkbox"></span>Otros</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cuales?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="comportamiento_violencia" class="field prepend-icon form-inline">
+																<input type="text" name="comportamiento_violencia" ng-model="beneficiario.comportamiento_violencia" id="comportamiento_violencia" class="gui-input" placeholder="¿Cuales?">
+																<label for="comportamiento_violencia" class="field">
 
 																</label>
 															</label>
@@ -2764,23 +2631,23 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿El niño o la niña han recibido algún tipo de ayuda o acompañamiento frente a la ocurrencia de estos hechos o situaciones?:</label>
+										<label for="ayuda_hechos" class="field-label">¿El niño o la niña han recibido algún tipo de ayuda o acompañamiento frente a la ocurrencia de estos hechos o situaciones?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="ayuda_hechos" ng-model="beneficiario.ayuda_hechos" value="si">
 														<span class="checkbox"></span>Si </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="ayuda_hechos" ng-model="beneficiario.ayuda_hechos" value="no">
 														<span class="checkbox"></span>No</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="ayuda_hechos" ng-model="beneficiario.ayuda_hechos" value="NS">
 														<span class="checkbox"></span>NS </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="ayuda_hechos" ng-model="beneficiario.ayuda_hechos" value="NA">
 														<span class="checkbox"></span>NA </label>
 												</div>
 											</div>
@@ -2798,26 +2665,26 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿En qué lugar han recibido la ayuda o acompañamiento?:</label>
+										<label for="lugar_ayuda" class="field-label">¿En qué lugar han recibido la ayuda o acompañamiento?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" value="familia">
 														<span class="checkbox"></span>En la familia</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" value="escuela">
 														<span class="checkbox"></span>En la escuela</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" value="centro de salud">
 														<span class="checkbox"></span>Centro de salud</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" value="ninguno">
 														<span class="checkbox"></span>Ninguno</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" value="no aplica">
 														<span class="checkbox"></span>No aplica</label>
 													<br>
 													<br>
@@ -2825,16 +2692,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="lugar_ayuda" class="field prepend-icon form-inline">
+																<input type="text" name="lugar_ayuda" ng-model="beneficiario.lugar_ayuda" id="lugar_ayuda" class="gui-input" placeholder="¿Cual?">
+																<label for="lugar_ayuda" class="field">
 
 																</label>
 															</label>
@@ -2856,20 +2723,23 @@ Empleados de AIB
 									<h6 class="mt40 mb20" id="spy4">Conocimiento sobre Violencia Intrafamiliar</h6>
 
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Sabe usted a donde puede acudir en caso de maltrato infantil y violencia intrafamiliar?:</label>
+										<label for="donde_acudir" class="field-label">¿Sabe usted a donde puede acudir en caso de maltrato infantil y violencia intrafamiliar?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="donde_acudir" ng-model="beneficiario.donde_acudir" value="si">
 														<span class="checkbox"></span>Si </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="donde_acudir" ng-model="beneficiario.donde_acudir" value="no">
 														<span class="checkbox"></span>No</label>
+                                                    <label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="donde_acudir" ng-model="beneficiario.donde_acudir" value="NS">
+														<span class="checkbox"></span>NS </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="donde_acudir" ng-model="beneficiario.donde_acudir" value="NA">
 														<span class="checkbox"></span>NA </label>
 												</div>
 											</div>
@@ -2887,26 +2757,26 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿A cuáles instituciones acudiría?:</label>
+										<label for="cual_acudir" class="field-label">¿A cuáles instituciones acudiría?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="cual_acudir" ng-model="beneficiario.cual_acudir" value="comisaria">
 														<span class="checkbox"></span>Comisaría de familia</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="cual_acudir" ng-model="beneficiario.cual_acudir" value="ICBF">
 														<span class="checkbox"></span>ICBF</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="cual_acudir" ng-model="beneficiario.cual_acudir" value="alcaldia">
 														<span class="checkbox"></span>Alcaldía</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="cual_acudir" ng-model="beneficiario.cual_acudir" value="escuela">
 														<span class="checkbox"></span>Escuela</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="cual_acudir" ng-model="beneficiario.cual_acudir" value="parroquia">
 														<span class="checkbox"></span>Parroquia</label>
 
 
@@ -2916,16 +2786,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="cual_acudir" ng-model="beneficiario.cual_acudir" value="otro">
 																<span class="checkbox"></span>Otra</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="cual_acudir" class="field prepend-icon form-inline">
+																<input type="text" name="cual_acudir" ng-model="beneficiario.cual_acudir" id="cual_acudir" class="gui-input" placeholder="¿Cual?">
+																<label for="cual_acudir" class="field">
 
 																</label>
 															</label>
@@ -2953,59 +2823,14 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">En qué mes celebran Fiestas Culturales en la Comunidad:</label>
-										<div class=" option-group field">
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>No sabe</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>1</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>2</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>3</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>4</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>5</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>6</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>7</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>8</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>9</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>10</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>11</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>12</label>
+										<label for="mes_culturales" class="field-label">En qué mes celebran Fiestas Culturales en la Comunidad:</label>
+										<div class=" option-group field col-md-3">
+											<label for="mes_culturales" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.mes_culturales" id="mes_culturales" class="gui-input" placeholder="MES" min="0" max="12">
+											<label for="mes_culturales" class="field-icon">
+												<i class="fa fa-user"></i>
+											</label>
+										</label>
 										</div>
 
 									</div>
@@ -3015,59 +2840,14 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">En qué mes celebran Fiestas Étnicas en la Comunidad:</label>
-										<div class=" option-group field">
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>No sabe</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>1</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>2</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>3</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>4</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>5</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>6</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>7</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>8</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>9</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>10</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>11</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>12</label>
+										<label for="mes_etnicas" class="field-label">En qué mes celebran Fiestas Étnicas en la Comunidad:</label>
+										<div class=" option-group field col-md-3">
+											<label for="mes_etnicas" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.mes_etnicas" id="mes_etnicas" class="gui-input" placeholder="MES" min="0" max="12">
+											<label for="mes_etnicas" class="field-icon">
+												<i class="fa fa-user"></i>
+											</label>
+										</label>
 										</div>
 
 									</div>
@@ -3077,59 +2857,14 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">En qué mes celebran Fiestas Religiosas en la Comunidad:</label>
-										<div class=" option-group field">
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>No sabe</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>1</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>2</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>3</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>4</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>5</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>6</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>7</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>8</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>9</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>10</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>11</label>
-
-											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
-												<span class="radio"></span>12</label>
+										<label for="mes_religiosas" class="field-label">En qué mes celebran Fiestas Religiosas en la Comunidad:</label>
+										<div class=" option-group field col-md-3">
+											<label for="mes_religiosas" class="field prepend-icon">
+											<input type="number" ng-model="beneficiario.mes_religiosas" id="mes_religiosas" class="gui-input" placeholder="MES" min="0" max="12">
+											<label for="mes_religiosas" class="field-icon">
+												<i class="fa fa-user"></i>
+											</label>
+										</label>
 										</div>
 
 									</div>
@@ -3139,21 +2874,24 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Algún miembro de la familia pertenece a alguno grupo?:</label>
+										<label for="pertenece_grupo" class="field-label">¿Algún miembro de la familia pertenece a alguno grupo?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="si">
 														<span class="checkbox"></span>Si </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="no">
 														<span class="checkbox"></span>No</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="NS">
 														<span class="checkbox"></span>NS </label>
+                                                    <label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="NA">
+														<span class="checkbox"></span>NA </label>
 
 												</div>
 											</div>
@@ -3175,57 +2913,57 @@ Empleados de AIB
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="jac">
 														<span class="checkbox"></span>Junta de acción comunal</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="comite civico">
 														<span class="checkbox"></span>Comité cívico</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="junta de deportes">
 														<span class="checkbox"></span>Junta de deportes</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="veeduria ciudadana">
 														<span class="checkbox"></span>Veeduría ciudadana</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="pesqueros">
 														<span class="checkbox"></span>Asociación de Pesqueros</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="fundaciones">
 														<span class="checkbox"></span>Fundaciones/corporaciones</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="cooperativas">
 														<span class="checkbox"></span>Cooperativas</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="asociaciones padres">
 														<span class="checkbox"></span>Asociación de padres de familia</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="grupos juveniles">
 														<span class="checkbox"></span>Grupos juveniles</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="grupos de mujeres">
 														<span class="checkbox"></span>Grupos de mujeres</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="adulto mayor">
 														<span class="checkbox"></span>Grupo de adulto mayor</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="desplazados">
 														<span class="checkbox"></span>Comité de desplazados</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="comite alimentos">
 														<span class="checkbox"></span>Comité de alimentos</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="ninguna">
 														<span class="checkbox"></span>Ninguna</label>
 													<br>
 													<br>
@@ -3233,16 +2971,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="otra">
 																<span class="checkbox"></span>Otra</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="pertenece_grupo" class="field prepend-icon form-inline">
+																<input type="text" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" id="pertenece_grupo" class="gui-input" placeholder="¿Cual?">
+																<label for="pertenece_grupo" class="field">
 
 																</label>
 															</label>
@@ -3259,23 +2997,111 @@ Empleados de AIB
 
 								</div>
 							</div>
-							<div class="row">
+                            <div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Se han desarrollado o desarrollan proyectos productivos en su comunidad? :</label>
+										<label for="integrados_grupos" class="field-label">¿Los niños o las niñas están integrados a algún grupo de la comunidad? :</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="si">
 														<span class="checkbox"></span>Si </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="no">
 														<span class="checkbox"></span>No</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="NS">
+														<span class="checkbox"></span>NS </label>
+                                                    <label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="NS">
+														<span class="checkbox"></span>NA </label>
+
+												</div>
+											</div>
+
+										</div>
+
+
+										<br>
+
+
+									</div>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="religioso">
+														<span class="checkbox"></span>Religioso</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="deportivo">
+														<span class="checkbox"></span>Deportivo</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="artistico">
+														<span class="checkbox"></span>Artístico</label>
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="ecologico">
+														<span class="checkbox"></span>Ecológico</label>
+													<br>
+													<br>
+													<div class="row">
+
+														<div class="col-md-2">
+															<label class="checkbox-inline mt15 option option-primary">
+																<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="otro">
+																<span class="checkbox"></span>Otro</label>
+
+														</div>
+
+														<div class="col-md-3">
+
+															<label for="integrados_grupos" class="field prepend-icon form-inline">
+																<input type="text" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" id="integrados_grupos" class="gui-input" placeholder="¿Cual?">
+																<label for="integrados_grupos" class="field">
+
+																</label>
+															</label>
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+										</div>
+										<br>
+									</div>
+
+								</div>
+							</div>
+                           
+                            <div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<label for="proyectos_productivos" class="field-label">¿Se han desarrollado o desarrollan proyectos productivos en su comunidad? :</label>
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="si">
+														<span class="checkbox"></span>Si </label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="no">
+														<span class="checkbox"></span>No</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="NS">
 														<span class="checkbox"></span>No sabe </label>
 
 												</div>
@@ -3298,21 +3124,21 @@ Empleados de AIB
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="hortalizas">
 														<span class="checkbox"></span>Hortalizas</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="pisicultura">
 														<span class="checkbox"></span>Piscicultura</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="apicultura">
 														<span class="checkbox"></span>Apicultura</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="artesanias">
 														<span class="checkbox"></span>Artesanías</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="ninguno">
 														<span class="checkbox"></span>Ninguno</label>
 
 													<br>
@@ -3321,16 +3147,105 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="proyectos_productivos" class="field prepend-icon form-inline">
+																<input type="text" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" id="proyectos_productivos" class="gui-input" placeholder="¿Cual?">
+																<label for="proyectos_productivos" class="field">
+
+																</label>
+															</label>
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+										</div>
+										<br>
+									</div>
+
+								</div>
+							</div>
+                            ***
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<label for="proyectos_productivos" class="field-label">¿Se han desarrollado o desarrollan proyectos productivos en su comunidad? :</label>
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="si">
+														<span class="checkbox"></span>Si </label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="no">
+														<span class="checkbox"></span>No</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="NS">
+														<span class="checkbox"></span>No sabe </label>
+
+												</div>
+											</div>
+
+										</div>
+
+
+										<br>
+
+
+									</div>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="hortalizas">
+														<span class="checkbox"></span>Hortalizas</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="pisicultura">
+														<span class="checkbox"></span>Piscicultura</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="apicultura">
+														<span class="checkbox"></span>Apicultura</label>
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="artesanias">
+														<span class="checkbox"></span>Artesanías</label>
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="ninguno">
+														<span class="checkbox"></span>Ninguno</label>
+
+													<br>
+													<br>
+													<div class="row">
+
+														<div class="col-md-2">
+															<label class="checkbox-inline mt15 option option-primary">
+																<input type="checkbox" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" value="otro">
+																<span class="checkbox"></span>Otro</label>
+
+														</div>
+
+														<div class="col-md-3">
+
+															<label for="proyectos_productivos" class="field prepend-icon form-inline">
+																<input type="text" name="proyectos_productivos" ng-model="beneficiario.proyectos_productivos" id="proyectos_productivos" class="gui-input" placeholder="¿Cual?">
+																<label for="proyectos_productivos" class="field">
 
 																</label>
 															</label>
@@ -3350,48 +3265,48 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuáles de los siguientes programas benefician a su familia?:</label>
+										<label for="programas_benefician" class="field-label">¿Cuáles de los siguientes programas benefician a su familia?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="familias en accion">
 														<span class="checkbox"></span>Familias en acción </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="adulto mayor">
 														<span class="checkbox"></span>Adulto mayor </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="red juntos">
 														<span class="checkbox"></span>Red Juntos</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="desayunos infantiles">
 														<span class="checkbox"></span>Desayunos infantiles </label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="ninguno">
 														<span class="checkbox"></span>Ninguno</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="no sabe">
 														<span class="checkbox"></span>No sabe</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="hogares comunitarios">
 														<span class="checkbox"></span>Hogares comunitarios</label>
 													<br>
 													<br>
 													<div class="row">
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="programas_benefician" ng-model="beneficiario.programas_benefician" value="otros">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="programas_benefician" class="field prepend-icon form-inline">
+																<input type="text" name="programas_benefician" ng-model="beneficiario.programas_benefician" id="programas_benefician" class="gui-input" placeholder="¿Cual?">
+																<label for="programas_benefician" class="field">
 
 																</label>
 															</label>
@@ -3414,16 +3329,16 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Conoce usted organizaciones que estén prestando servicios a la comunidad? :</label>
+										<label for="organizaciones_comunidad" class="field-label">¿Conoce usted organizaciones que estén prestando servicios a la comunidad? :</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="si">
 														<span class="checkbox"></span>Si </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="no">
 														<span class="checkbox"></span>No</label>
 
 												</div>
@@ -3446,41 +3361,41 @@ Empleados de AIB
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="Fundacion hernan">
 														<span class="checkbox"></span>F Hernán Echavarría O</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="fao">
 														<span class="checkbox"></span>FAO</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="pma">
 														<span class="checkbox"></span>PMA</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="fundacion mario">
 														<span class="checkbox"></span>F Mario Santodomingo</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="ecopetrol">
 														<span class="checkbox"></span>Ecopetrol</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="gobernacion">
 														<span class="checkbox"></span>Gobernación</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="icbf">
 														<span class="checkbox"></span>ICBF</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="accion social">
 														<span class="checkbox"></span>Acción Social</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="sena">
 														<span class="checkbox"></span>SENA</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="corplaya">
 														<span class="checkbox"></span>F Corplaya</label>
 													<br>
 													<br>
@@ -3488,16 +3403,120 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" value="otra">
 																<span class="checkbox"></span>Otra</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="organizaciones_comunidad" class="field prepend-icon form-inline">
+																<input type="text" name="organizaciones_comunidad" ng-model="beneficiario.organizaciones_comunidad" id="organiazaciones_comunidad" class="gui-input" placeholder="¿Cual?">
+																<label for="organizaciones_comunidad" class="field">
+
+																</label>
+															</label>
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+										</div>
+										<br>
+									</div>
+
+								</div>
+							</div>
+
+                            <div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<label for="organizaciones_beneficia" class="field-label">¿Algún miembro de la familia se beneficia de alguna de estas organizaciones? :</label>
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="si">
+														<span class="checkbox"></span>Si </label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="no">
+														<span class="checkbox"></span>No</label>
+
+												</div>
+											</div>
+
+										</div>
+
+
+										<br>
+
+
+									</div>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section">
+										<div class="row">
+											<div class="col-md-12">
+												<div class=" option-group field">
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="Fundacion hernan">
+														<span class="checkbox"></span>F Hernán Echavarría O</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="fao">
+														<span class="checkbox"></span>FAO</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="pma">
+														<span class="checkbox"></span>PMA</label>
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="fundacion mario">
+														<span class="checkbox"></span>F Mario Santodomingo</label>
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="ecopetrol">
+														<span class="checkbox"></span>Ecopetrol</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="gobernacion">
+														<span class="checkbox"></span>Gobernación</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="icbf">
+														<span class="checkbox"></span>ICBF</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="accion social">
+														<span class="checkbox"></span>Acción Social</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="sena">
+														<span class="checkbox"></span>SENA</label>
+
+													<label class="checkbox-inline mt15 option option-primary">
+														<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="corplaya">
+														<span class="checkbox"></span>F Corplaya</label>
+													<br>
+													<br>
+													<div class="row">
+
+														<div class="col-md-2">
+															<label class="checkbox-inline mt15 option option-primary">
+																<input type="checkbox" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" value="otra">
+																<span class="checkbox"></span>Otra</label>
+
+														</div>
+
+														<div class="col-md-3">
+
+															<label for="organizaciones_beneficia" class="field prepend-icon form-inline">
+																<input type="text" name="organizaciones_beneficia" ng-model="beneficiario.organizaciones_beneficia" id="organiazaciones_beneficia" class="gui-input" placeholder="¿Cual?">
+																<label for="organizaciones_beneficia" class="field">
 
 																</label>
 															</label>
@@ -3516,8 +3535,6 @@ Empleados de AIB
 							</div>
 
 
-
-
 						</section>
 
 						<h4 class="wizard-section-title">
@@ -3526,18 +3543,18 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cómo considera que se encuentra el estado de las vías?:</label>
+										<label for="estado_vias" class="field-label">¿Cómo considera que se encuentra el estado de las vías?:</label>
 										<div class=" option-group field">
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="estado_vias" ng-model="beneficiario.estado_vias" value="bueno" checked="">
 												<span class="radio"></span>Bueno </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="estado_vias" ng-model="beneficiario.estado_vias" value="regular">
 												<span class="radio"></span>Regular </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="estado_vias" ng-model="beneficiario.estado_vias" value="malo">
 												<span class="radio"></span>Malo</label>
 
 
@@ -3550,26 +3567,26 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuál es el principal medio de transporte al interior de la comunidad? ? (Marque un sola respuesta):</label>
+										<label for="medio_transporte" class="field-label">¿Cuál es el principal medio de transporte al interior de la comunidad? ? (Marque un sola respuesta):</label>
 										<div class=" option-group field">
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="medio_transporte" ng-model="beneficiario.medio_transporte" value="moto" checked="">
 												<span class="radio"></span>Moto </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="medio_transporte" ng-model="beneficiario.medio_transporte" value="carro">
 												<span class="radio"></span>Carro </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="medio_transporte" ng-model="beneficiario.medio_transporte" value="bus">
 												<span class="radio"></span>Bus </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="medio_transporte" ng-model="beneficiario.medio_transporte" value="bicicleta">
 												<span class="radio"></span>Bicicleta </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="medio_transporte" ng-model="beneficiario.medio_transporte" value="lancha">
 												<span class="radio"></span>Lancha </label>
 
 
@@ -3582,26 +3599,26 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuál es el principal medio de transporte hacia otros lugares por fuera de la comunidad? ? (Marque un sola respuesta):</label>
+										<label for="transporte_fuera" class="field-label">¿Cuál es el principal medio de transporte hacia otros lugares por fuera de la comunidad?</label>
 										<div class=" option-group field">
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="transporte_fuera" ng-model="beneficiario.transporte_fuera" value="moto" checked="">
 												<span class="radio"></span>Moto </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="transporte_fuera" ng-model="beneficiario.transporte_fuera" value="carro">
 												<span class="radio"></span>Carro </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="transporte_fuera" ng-model="beneficiario.transporte_fuera" value="bus">
 												<span class="radio"></span>Bus </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="transporte_fuera" ng-model="beneficiario.transporte_fuera" value="bicicleta">
 												<span class="radio"></span>Bicicleta </label>
 
 											<label class="radio-inline mt15 option option-primary">
-												<input type="radio" name="mes" checked="">
+												<input type="radio" name="transporte_fuera" ng-model="beneficiario.transporte_fuera" value="lancha">
 												<span class="radio"></span>Lancha </label>
 
 
@@ -3619,29 +3636,29 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuál o cuáles considera que son las necesidades significativas de su comunidad?:</label>
+										<label for="necesidades_comunidad" class="field-label">¿Cuál o cuáles considera que son las necesidades significativas de su comunidad?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="vivienda">
 														<span class="checkbox"></span>Vivienda</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="empleo">
 														<span class="checkbox"></span>Empleo/ingresos</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="agua">
 														<span class="checkbox"></span>Servicio de agua</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="energia">
 														<span class="checkbox"></span>Servicio de energía</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="gas">
 														<span class="checkbox"></span>Servicio de gas</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="ninguna">
 														<span class="checkbox"></span>Ninguna</label>
 
 
@@ -3651,16 +3668,16 @@ Empleados de AIB
 
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" value="otro">
 																<span class="checkbox"></span>Otro</label>
 
 														</div>
 
 														<div class="col-md-3">
 
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="necesidades_comunidad" class="field prepend-icon form-inline">
+																<input type="text" name="necesidades_comunidad" ng-model="beneficiario.necesidades_comunidad" id="necesidades_comunidad" class="gui-input" placeholder="¿Cual?">
+																<label for="necesidades_comunidad" class="field">
 
 																</label>
 															</label>
@@ -3680,39 +3697,39 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Cuál o cuáles considera que son las problemáticas que más afectan a su comunidad?:</label>
+										<label for="problemas_comunidad" class="field-label">¿Cuál o cuáles considera que son las problemáticas que más afectan a su comunidad?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" value="desnutricion">
 														<span class="checkbox"></span>Desnutrición</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" value="abuso sexual">
 														<span class="checkbox"></span>Abuso sexual</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" value="drogas">
 														<span class="checkbox"></span>Drogadicción</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" value="violencia intrafamiliar">
 														<span class="checkbox"></span>Violencia intrafamiliar</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" value="ninguna">
 														<span class="checkbox"></span>Ninguna</label>
 													<br>
 													<br>
 													<div class="row">
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" value="otro">
 																<span class="checkbox"></span>Otro</label>
 														</div>
 														<div class="col-md-3">
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="problemas_comunidad" class="field prepend-icon form-inline">
+																<input type="text" name="problemas_comunidad" ng-model="beneficiario.problemas_comunidad" id="problemas_comunidad" class="gui-input" placeholder="¿Cual?">
+																<label for="problemas_comunidad" class="field">
 
 																</label>
 															</label>
@@ -3732,23 +3749,23 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">¿Las niñas y niños que asisten al colegio reciben almuerzo o merienda gratuita?:</label>
+										<label for="almuerzo_gratis" class="field-label">¿Las niñas y niños que asisten al colegio reciben almuerzo o merienda gratuita?:</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="radio-inline mt15 option option-primary">
-														<input type="radio" name="mes" checked="">
+														<input type="radio" name="almuerzo_gratis" ng-model="beneficiario.almuerzo_gratis" value="si" checked="">
 														<span class="radio"></span>Si </label>
 
 													<label class="radio-inline mt15 option option-primary">
-														<input type="radio" name="mes" checked="">
+														<input type="radio" name="almuerzo_gratis" ng-model="beneficiario.almuerzo_gratis" value="no">
 														<span class="radio"></span>No </label>
 
 													<label class="radio-inline mt15 option option-primary">
-														<input type="radio" name="mes" checked="">
+														<input type="radio" name="almuerzo_gratis" ng-model="beneficiario.almuerzo_gratis" value="NS">
 														<span class="radio"></span>NS </label>
 													<label class="radio-inline mt15 option option-primary">
-														<input type="radio" name="mes" checked="">
+														<input type="radio" name="almuerzo_gratis" ng-model="beneficiario.almuerzo_gratis" value="NA">
 														<span class="radio"></span>NA </label>
 												</div>
 											</div>
@@ -3761,47 +3778,47 @@ Empleados de AIB
 							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
-										<label for="parentesco_encuestado" class="field-label">Estudios o Capacitaciones que les gustaría recibir (Marque las respuesta):</label>
+										<label for="recibir_estudios" class="field-label">Estudios o Capacitaciones que les gustaría recibir (Marque las respuesta):</label>
 										<div class="row">
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="cocina">
 														<span class="checkbox"></span>Cocina</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="turismo">
 														<span class="checkbox"></span>Turismo</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="modisteria">
 														<span class="checkbox"></span>Modistería</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="idiomas">
 														<span class="checkbox"></span>Idiomas</label>
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="hoteleria">
 														<span class="checkbox"></span>Hotelería</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="mercadeo">
 														<span class="checkbox"></span>Mercadeo</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="sistema">
 														<span class="checkbox"></span>Sistema</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="administracion">
 														<span class="checkbox"></span>Administración</label>
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="contabilidad">
 														<span class="checkbox"></span>Contabilidad</label>
 
 
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="checked1">
+														<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="construccion">
 														<span class="checkbox"></span>Construcción</label>
 
 
@@ -3811,13 +3828,13 @@ Empleados de AIB
 													<div class="row">
 														<div class="col-md-2">
 															<label class="checkbox-inline mt15 option option-primary">
-																<input type="checkbox" name="checked1">
+																<input type="checkbox" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" value="otra">
 																<span class="checkbox"></span>Otra</label>
 														</div>
 														<div class="col-md-3">
-															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="familia_vive" id="jefe_nacio1" class="gui-input" placeholder="¿Cual?">
-																<label for="parentesco_encuestado" class="field">
+															<label for="recibir_estudios" class="field prepend-icon form-inline">
+																<input type="text" name="recibir_estudios" ng-model="beneficiario.recibir_estudios" id="recibir_estudios" class="gui-input" placeholder="¿Cual?">
+																<label for="recibir_estudios" class="field">
 
 																</label>
 															</label>
@@ -3836,9 +3853,9 @@ Empleados de AIB
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<label for="parentesco_encuestado" class="field-label">OBSERVACIONES DEL ENCUESTADOR :</label>
+									<label for="observaciones" class="field-label">OBSERVACIONES DEL ENCUESTADOR :</label>
 									<div class="bs-component">
-										<textarea class="form-control" id="textArea2" rows="3"></textarea>
+										<textarea class="form-control" name="observaciones" ng-model="beneficiario.observaciones" id="observaciones" rows="3"></textarea>
 									</div>
 								</div>
 							</div>
@@ -3868,8 +3885,8 @@ Empleados de AIB
 									</div>
 									<button id="btnCrearParticipante" type="button" class="btn btn-lg btn-primary btn-block">Crear nuevo</button>
 								</div>
-
-
+                                
+                                
 
 
 							</div>
@@ -3879,12 +3896,12 @@ Empleados de AIB
 
 				</form>
 				<!-- -------------- /Form -------------- -->
-
+                
 			</div>
 			<!-- -------------- /Spec Form -------------- -->
 
 		</div>
-
+        <input type="hidden" name="end" class="end" id="end" ng-model="end" ng-controller="fichaController" ng-click="setBeneficiario()" onclick="alert("cule viaje")">
 	</section>
 
 	<!-- -------------- /Body Wrap  --------->
