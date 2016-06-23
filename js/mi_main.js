@@ -8,8 +8,9 @@
 	$(document).ready(function () {
 
 
-
-
+		var btnWizard=$(".actions");
+		console.log(btnWizard);
+		btnWizard.hide();
 		var form = $("#mi-wizard");
 		var form2 = $("#form2");
 		if (localStorage.getItem('iceberg_contador') != undefined) {
@@ -29,32 +30,6 @@
 			onStepChanging: function (event, currentIndex, newIndex) {
 				form.validate().settings.ignore = ":disabled,:hidden";
 				return form.valid();
-			},
-			onFinishing: function (event, currentIndex) {
-				form.validate().settings.ignore = ":disabled";
-				return form.valid();
-			},
-			onFinished: function (event, currentIndex) {
-				var contador = 0;
-				if (localStorage.getItem('iceberg_contador') != undefined) {
-
-					contador = parseInt(localStorage.getItem('iceberg_contador'));
-					var suma = contador + 1;
-					console.log(suma);
-					localStorage.setItem('iceberg_contador', suma);
-					$('#total_add').text(localStorage.getItem('iceberg_contador'));
-
-
-				} else {
-					var suma = parseInt(contador + 1);
-					//console.log(suma);
-					localStorage.setItem('iceberg_contador', suma);
-					$('#total_add').text(suma);
-					console.log("aqui");
-				}
-				guardarInformacion(form);
-				//location.reload();
-                
 			}
 		});
 

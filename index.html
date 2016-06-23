@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
 <head>
 	<meta charset="utf-8">
@@ -27,7 +27,7 @@
     <![endif]-->
 </head>
 
-<body class="utility-page sb-l-c sb-r-c" style="height:auto !important" ng-app="app">
+<body class="utility-page sb-l-c sb-r-c" style="height:auto !important" ng-controller="fichaController">
 
 	<!-- Modals-->
 
@@ -448,11 +448,11 @@ Empleados de AIB
 		</div>
 		<div class="topbar-right">
 			<div class="navbar-btn btn-group">
-                    <button id="btn-syncronizar" class="btn btn-lg  btn-primary" aria-expanded="false">
-                       Sync
-                    </button>
+				<button id="btn-syncronizar" class="btn btn-lg  btn-primary" aria-expanded="false">
+					Sync
+				</button>
 
-                </div>
+			</div>
 			<div class="ml15 ib va-m" id="sidebar_right_toggle">
 				<div class="navbar-btn btn-group btn-group-number mv0">
 					<button class="btn btn-sm btn-default btn-bordered prn pln">
@@ -500,7 +500,7 @@ Empleados de AIB
 									<div class="section">
 										<label for="area" class="field-label">Área de influencia</label>
 										<label class="field select">
-											<select id="zonainfluencia" ng-model="beneficiario.zonainfluencia" >
+											<select id="zonainfluencia" ng-model="beneficiario.zonainfluencia">
 												<option value="0">Seleccione área de influencia</option>
 												<option value="ararca">Ararca</option>
 												<option value="0">Barú</option>
@@ -673,7 +673,7 @@ Empleados de AIB
 										<div class="smart-widget">
 											<label for="direccion" class="field prepend-icon">
 												<input type="text" id="programas" data-role="tags input" ng-model="beneficiario.programas">
-												<label for="programas" class="field-icon" >
+												<label for="programas" class="field-icon">
 													<!--i class="fa fa-user"></i-->
 												</label>
 											</label>
@@ -728,7 +728,7 @@ Empleados de AIB
 								</div>
 
 
-								<div class="col-md-6" >
+								<div class="col-md-6">
 									<h6 class="mt40 mb20" id="spy4">¿Quién o quiénes son los jefes?</h6>
 
 									<div class="section">
@@ -787,7 +787,7 @@ Empleados de AIB
 
 										<div class="smart-widget">
 											<label for="jefe_familia1" class="field prepend-icon">
-												<input type="text"  ng-model="beneficiario.jefe_familia1" id="jefe_familia1" class="gui-input" placeholder="Nombre completo">
+												<input type="text" ng-model="beneficiario.jefe_familia1" id="jefe_familia1" class="gui-input" placeholder="Nombre completo">
 												<label for="jefe_familia1" class="field-icon">
 													<i class="fa fa-user"></i>
 												</label>
@@ -802,7 +802,7 @@ Empleados de AIB
 
 										<div class="smart-widget">
 											<label for="jefe_familia2" class="field prepend-icon">
-												<input type="text"  ng-model="beneficiario.jefe_familia2" id="jefe_familia2" class="gui-input" placeholder="Nombre completo">
+												<input type="text" ng-model="beneficiario.jefe_familia2" id="jefe_familia2" class="gui-input" placeholder="Nombre completo">
 												<label for="jefe_familia2" class="field-icon">
 													<i class="fa fa-user"></i>
 												</label>
@@ -818,7 +818,7 @@ Empleados de AIB
 
 										<div class="smart-widget">
 											<label for="jefe_edad1" class="field prepend-icon">
-												<input type="text"  ng-model="beneficiario.jefe_edad1" id="jefe_edad1" class="gui-input" placeholder="Edad">
+												<input type="text" ng-model="beneficiario.jefe_edad1" id="jefe_edad1" class="gui-input" placeholder="Edad">
 												<label for="jefe_edad1" class="field-icon">
 													<i class="fa fa-user"></i>
 												</label>
@@ -832,7 +832,7 @@ Empleados de AIB
 
 										<div class="smart-widget">
 											<label for="jefe_edad2" class="field prepend-icon">
-												<input type="text"  ng-model="beneficiario.jefe_edad2" id="jefe_edad2" class="gui-input" placeholder="Edad">
+												<input type="text" ng-model="beneficiario.jefe_edad2" id="jefe_edad2" class="gui-input" placeholder="Edad">
 												<label for="jefe_edad2" class="field-icon">
 													<i class="fa fa-user"></i>
 												</label>
@@ -849,7 +849,7 @@ Empleados de AIB
 
 										<div class="option-group field">
 											<label class=" option option-primary radio-inline">
-												<input type="radio" name="jefe_sexo1"  ng-model="beneficiario.jefe_sexo1"checked="" value="M">
+												<input type="radio" name="jefe_sexo1" ng-model="beneficiario.jefe_sexo1" checked="" value="M">
 												<span class="radio"></span>M</label>
 
 											<label class=" option option-primary radio-inline">
@@ -995,7 +995,7 @@ Empleados de AIB
 												<input type="radio" name="lengua_familia" ng-model="beneficiario.lengua_familia" checked="" value="español">
 												<span class="radio"></span>Español</label>
 											<label class="option option-primary radio-inline">
-												<input type="radio"  name="lengua_familia" ng-model="beneficiario.lengua_familia" value="afro">
+												<input type="radio" name="lengua_familia" ng-model="beneficiario.lengua_familia" value="afro">
 												<span class="radio"></span>Lengua Afro</label>
 										</div>
 									</div>
@@ -1057,7 +1057,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda1" class="field-label">¿En la familia hay niños y niñas entre 0 y 6 meses? </label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1077,7 +1077,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda2" class="field-label">¿En la familia hay niños entre 7 meses y 2 años de edad?</label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1096,7 +1096,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda3" class="field-label">¿En la familia hay niños entre 3 y 5 años? </label>
 								</div>
-								
+
 								<div class="col-md-3">
 									<div class="section">
 
@@ -1114,7 +1114,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda4" class="field-label">¿En la familia hay niños y niñas entre 6 y 11 años? </label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1133,7 +1133,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda5" class="field-label">¿En la familia hay niños y niñas entre 12 y 17 años? </label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1152,7 +1152,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda6" class="field-label">¿En la familia hay hombres y mujeres entre 18 y 40 años?</label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1171,7 +1171,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda7" class="field-label">¿En la familia hay hombres y mujeres entre 41 y 64 años? </label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1190,7 +1190,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda8" class="field-label">¿En la familia hay mujeres y hombres mayores de 65 años?</label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1211,7 +1211,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda9" class="field-label">¿En la familia hay mujeres embarazadas? </label>
 								</div>
-								
+
 								<div class="col-md-3">
 									<div class="section">
 
@@ -1229,7 +1229,7 @@ Empleados de AIB
 								<div class="col-md-6">
 									<label for="perso_vivienda10" class="field-label">¿En la familia hay personas con discapacidad?</label>
 								</div>
-								
+
 
 								<div class="col-md-3">
 									<div class="section">
@@ -1310,11 +1310,11 @@ Empleados de AIB
 
 										<div class=" option-group field">
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda"checked="" value="casa">
+												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda" checked="" value="casa">
 												<span class="radio"></span>Casa </label>
 
 											<label class="option option-primary radio-inline">
-												<input type="radio" name="tipo_vivienda"ng-model="beneficiario.tipo_vivienda" value="apartamento">
+												<input type="radio" name="tipo_vivienda" ng-model="beneficiario.tipo_vivienda" value="apartamento">
 												<span class="radio"></span>Apartamento </label>
 
 											<label class="option option-primary radio-inline">
@@ -1486,17 +1486,17 @@ Empleados de AIB
 								<div class="col-md-6">
 									<div class="section">
 										<label for="cuartos_vivienda" class="field-label">Cuantos cuartos o piezas dispone su hogar?</label>
-								<div class="col-md-6">
-									<div class="section">
+										<div class="col-md-6">
+											<div class="section">
 
-										<label for="cuartos_vivienda" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.cuartos_vivienda" id="cuartos_vivienda" class="gui-input" placeholder="¿Cuantos?">
-											<label for="cuartos_vivienda" class="field-icon">
-												<i class="fa fa-user"></i>
-											</label>
-										</label>
-									</div>
-								</div>
+												<label for="cuartos_vivienda" class="field prepend-icon">
+													<input type="number" ng-model="beneficiario.cuartos_vivienda" id="cuartos_vivienda" class="gui-input" placeholder="¿Cuantos?">
+													<label for="cuartos_vivienda" class="field-icon">
+														<i class="fa fa-user"></i>
+													</label>
+												</label>
+											</div>
+										</div>
 
 
 									</div>
@@ -1506,17 +1506,17 @@ Empleados de AIB
 								<div class="col-md-6">
 									<div class="section">
 										<label for="personas_habitacion" class="field-label">Cuantos personas duermen por habitación?</label>
-								<div class="col-md-6">
-									<div class="section">
+										<div class="col-md-6">
+											<div class="section">
 
-										<label for="personas_habitacion" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.personas_habitacion" id="personas_habitacion" class="gui-input" placeholder="¿Cuantas?">
-											<label for="personas_habitacion" class="field-icon">
-												<i class="fa fa-user"></i>
-											</label>
-										</label>
-									</div>
-								</div>
+												<label for="personas_habitacion" class="field prepend-icon">
+													<input type="number" ng-model="beneficiario.personas_habitacion" id="personas_habitacion" class="gui-input" placeholder="¿Cuantas?">
+													<label for="personas_habitacion" class="field-icon">
+														<i class="fa fa-user"></i>
+													</label>
+												</label>
+											</div>
+										</div>
 
 
 									</div>
@@ -1524,21 +1524,21 @@ Empleados de AIB
 								</div>
 
 							</div>
-                            <div class="row">
+							<div class="row">
 								<div class="col-md-6">
 									<div class="section">
 										<label for="posee_animales" class="field-label">Posee animales de cria?</label>
-								<div class="col-md-6">
-									<div class="section">
+										<div class="col-md-6">
+											<div class="section">
 
-										<label for="posee_animales" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.posee_animales" id="posee_animales" class="gui-input" placeholder="¿Cuantos?">
-											<label for="posee_animales" class="field-icon">
-												<i class="fa fa-user"></i>
-											</label>
-										</label>
-									</div>
-								</div>
+												<label for="posee_animales" class="field prepend-icon">
+													<input type="number" ng-model="beneficiario.posee_animales" id="posee_animales" class="gui-input" placeholder="¿Cuantos?">
+													<label for="posee_animales" class="field-icon">
+														<i class="fa fa-user"></i>
+													</label>
+												</label>
+											</div>
+										</div>
 
 
 									</div>
@@ -1594,7 +1594,7 @@ Empleados de AIB
 											</div>
 											<div class="col-md-4">
 												<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-													<input type="text" name="animales_cria" ng-model="beneficiario.animales_cria"  class="gui-input" placeholder="Otro" id="animales_cria">
+													<input type="text" name="animales_cria" ng-model="beneficiario.animales_cria" class="gui-input" placeholder="Otro" id="animales_cria">
 													<label for="animales_cria" class="field">
 
 													</label>
@@ -1646,7 +1646,7 @@ Empleados de AIB
 											<label class="option option-primary radio-inline">
 												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="desbordamiento">
 												<span class="radio"></span>Desbordamiento</label>
-                                            <label class="option option-primary radio-inline">
+											<label class="option option-primary radio-inline">
 												<input type="radio" name="riesgos" ng-model="beneficiario.riesgos" value="ninguna">
 												<span class="radio"></span>Ninguna</label>
 
@@ -2112,7 +2112,7 @@ Empleados de AIB
 														<div class="col-md-3">
 
 															<label for="parentesco_encuestado" class="field prepend-icon form-inline">
-																<input type="text" name="portan_mal" ng-model="beneficiario.portan_mal"  id="portan_mal" class="gui-input" placeholder="¿Cual?">
+																<input type="text" name="portan_mal" ng-model="beneficiario.portan_mal" id="portan_mal" class="gui-input" placeholder="¿Cual?">
 																<label for="portan_mal" class="field">
 
 																</label>
@@ -2442,7 +2442,7 @@ Empleados de AIB
 
 								</div>
 							</div>
-                            <div class="row">
+							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
 										<label for="hecho_violento" class="field-label">¿Usted cree que los niños o las niñas han presenciado hechos violentos dentro de la familia?:</label>
@@ -2484,7 +2484,7 @@ Empleados de AIB
 											<div class="col-md-12">
 												<div class=" option-group field">
 													<label class="checkbox-inline mt15 option option-primary">
-														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="entre padres"> 
+														<input type="checkbox" name="hecho_violento" ng-model="beneficiario.hecho_violento" value="entre padres">
 														<span class="checkbox"></span>Agresión verbal entre los padres </label>
 
 													<label class="checkbox-inline mt15 option option-primary">
@@ -2734,7 +2734,7 @@ Empleados de AIB
 													<label class="checkbox-inline mt15 option option-primary">
 														<input type="checkbox" name="donde_acudir" ng-model="beneficiario.donde_acudir" value="no">
 														<span class="checkbox"></span>No</label>
-                                                    <label class="checkbox-inline mt15 option option-primary">
+													<label class="checkbox-inline mt15 option option-primary">
 														<input type="checkbox" name="donde_acudir" ng-model="beneficiario.donde_acudir" value="NS">
 														<span class="checkbox"></span>NS </label>
 
@@ -2826,11 +2826,11 @@ Empleados de AIB
 										<label for="mes_culturales" class="field-label">En qué mes celebran Fiestas Culturales en la Comunidad:</label>
 										<div class=" option-group field col-md-3">
 											<label for="mes_culturales" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.mes_culturales" id="mes_culturales" class="gui-input" placeholder="MES" min="0" max="12">
-											<label for="mes_culturales" class="field-icon">
-												<i class="fa fa-user"></i>
+												<input type="number" ng-model="beneficiario.mes_culturales" id="mes_culturales" class="gui-input" placeholder="MES" min="0" max="12">
+												<label for="mes_culturales" class="field-icon">
+													<i class="fa fa-user"></i>
+												</label>
 											</label>
-										</label>
 										</div>
 
 									</div>
@@ -2843,11 +2843,11 @@ Empleados de AIB
 										<label for="mes_etnicas" class="field-label">En qué mes celebran Fiestas Étnicas en la Comunidad:</label>
 										<div class=" option-group field col-md-3">
 											<label for="mes_etnicas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.mes_etnicas" id="mes_etnicas" class="gui-input" placeholder="MES" min="0" max="12">
-											<label for="mes_etnicas" class="field-icon">
-												<i class="fa fa-user"></i>
+												<input type="number" ng-model="beneficiario.mes_etnicas" id="mes_etnicas" class="gui-input" placeholder="MES" min="0" max="12">
+												<label for="mes_etnicas" class="field-icon">
+													<i class="fa fa-user"></i>
+												</label>
 											</label>
-										</label>
 										</div>
 
 									</div>
@@ -2860,11 +2860,11 @@ Empleados de AIB
 										<label for="mes_religiosas" class="field-label">En qué mes celebran Fiestas Religiosas en la Comunidad:</label>
 										<div class=" option-group field col-md-3">
 											<label for="mes_religiosas" class="field prepend-icon">
-											<input type="number" ng-model="beneficiario.mes_religiosas" id="mes_religiosas" class="gui-input" placeholder="MES" min="0" max="12">
-											<label for="mes_religiosas" class="field-icon">
-												<i class="fa fa-user"></i>
+												<input type="number" ng-model="beneficiario.mes_religiosas" id="mes_religiosas" class="gui-input" placeholder="MES" min="0" max="12">
+												<label for="mes_religiosas" class="field-icon">
+													<i class="fa fa-user"></i>
+												</label>
 											</label>
-										</label>
 										</div>
 
 									</div>
@@ -2889,7 +2889,7 @@ Empleados de AIB
 													<label class="checkbox-inline mt15 option option-primary">
 														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="NS">
 														<span class="checkbox"></span>NS </label>
-                                                    <label class="checkbox-inline mt15 option option-primary">
+													<label class="checkbox-inline mt15 option option-primary">
 														<input type="checkbox" name="pertenece_grupo" ng-model="beneficiario.pertenece_grupo" value="NA">
 														<span class="checkbox"></span>NA </label>
 
@@ -2997,7 +2997,7 @@ Empleados de AIB
 
 								</div>
 							</div>
-                            <div class="row">
+							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
 										<label for="integrados_grupos" class="field-label">¿Los niños o las niñas están integrados a algún grupo de la comunidad? :</label>
@@ -3015,7 +3015,7 @@ Empleados de AIB
 													<label class="checkbox-inline mt15 option option-primary">
 														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="NS">
 														<span class="checkbox"></span>NS </label>
-                                                    <label class="checkbox-inline mt15 option option-primary">
+													<label class="checkbox-inline mt15 option option-primary">
 														<input type="checkbox" name="integrados_grupos" ng-model="beneficiario.integrados_grupos" value="NS">
 														<span class="checkbox"></span>NA </label>
 
@@ -3084,8 +3084,8 @@ Empleados de AIB
 
 								</div>
 							</div>
-                           
-                            <div class="row">
+
+							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
 										<label for="proyectos_productivos" class="field-label">¿Se han desarrollado o desarrollan proyectos productivos en su comunidad? :</label>
@@ -3429,7 +3429,7 @@ Empleados de AIB
 								</div>
 							</div>
 
-                            <div class="row">
+							<div class="row">
 								<div class="col-md-12">
 									<div class="section">
 										<label for="organizaciones_beneficia" class="field-label">¿Algún miembro de la familia se beneficia de alguna de estas organizaciones? :</label>
@@ -3884,8 +3884,8 @@ Empleados de AIB
 									</div>
 									<button id="btnCrearParticipante" type="button" class="btn btn-lg btn-primary btn-block">Crear nuevo</button>
 								</div>
-                                
-                                
+
+
 
 
 							</div>
@@ -3895,7 +3895,7 @@ Empleados de AIB
 
 				</form>
 				<!-- -------------- /Form -------------- -->
-                
+				<button ng-click="setBeneficiario()">Enviar</button>
 			</div>
 			<!-- -------------- /Spec Form -------------- -->
 
@@ -3904,7 +3904,6 @@ Empleados de AIB
 
 	<!-- -------------- /Body Wrap  --------->
 
-	<script src="js/angular.min.js"></script>
 
 	<script src="js/jquery/jquery-1.11.3.min.js"></script>
 
@@ -3924,6 +3923,8 @@ Empleados de AIB
 	<script src="js/plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/mi_main.js"></script>
+	<script src="js/angular.min.js"></script>
+
 	<script src="js/app.js"></script>
 
 
